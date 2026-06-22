@@ -1,0 +1,5 @@
+Tour Volcan Osorno;Aventura;35000
+Tour Saltos del Petrohue;Naturaleza;25000
+Tour Frutillar;Cultural;18000
+Tour Lago Todos Los Santos;Navegacion;40000
+Tour Llanquihue Nocturno;Gastronomico;30000
