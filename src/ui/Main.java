@@ -2,6 +2,7 @@ package ui;
 
 import Exceptions.RutInvalidoException;
 import data.GestorDatos;
+import data.GestorSerivicios;
 import model.Direccion;
 import model.GuiaTuristico;
 import model.Tour;
@@ -89,5 +90,8 @@ public class Main {
 
         System.out.println("\n----- Tours de Aventura -----");
         gestor.mostrarToursPorTipo("Aventura");
+
+        GestorSerivicios gestorSerivicios = new GestorSerivicios();
+        gestorSerivicios.crearServicios();
     }
 }
