@@ -2,7 +2,7 @@ package ui;
 
 import Exceptions.RutInvalidoException;
 import data.GestorDatos;
-import data.GestorSerivicios;
+import data.GestorServicios;
 import model.Direccion;
 import model.GuiaTuristico;
 import model.Tour;
@@ -10,6 +10,8 @@ import model.Tour;
 public class Main {
 
     public static void main(String[] args) {
+
+        /*
 
         Direccion direccion1 = new Direccion(
                 "Av. Costanera",
@@ -91,7 +93,11 @@ public class Main {
         System.out.println("\n----- Tours de Aventura -----");
         gestor.mostrarToursPorTipo("Aventura");
 
-        GestorSerivicios gestorSerivicios = new GestorSerivicios();
+
+         */
+
+        GestorServicios gestorSerivicios = new GestorServicios();
         gestorSerivicios.crearServicios();
+        gestorSerivicios.mostrarServicios();
     }
 }

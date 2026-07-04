@@ -3,9 +3,18 @@ package data;
 import model.ExcursionCultural;
 import model.PaseoLacustre;
 import model.RutaGastronomica;
+import model.ServicioTuristico;
 
-public class GestorSerivicios {
+import java.util.ArrayList;
+import java.util.List;
 
+public class GestorServicios {
+
+    private List<ServicioTuristico> listaServicios;
+
+    public GestorServicios(){
+        listaServicios = new ArrayList<>();
+    }
     public void crearServicios() {
 
         //Rutas Gatronómicas
@@ -16,11 +25,15 @@ public class GestorSerivicios {
                 5
         );
 
+        listaServicios.add(ruta1);
+
         RutaGastronomica ruta2 = new RutaGastronomica(
                 "Ruta de la Cerveza",
                 3,
                 4
         );
+
+        listaServicios.add(ruta2);
 
         //Paseos Lacustres
         PaseoLacustre paseo1 = new PaseoLacustre(
@@ -29,11 +42,15 @@ public class GestorSerivicios {
                 "Catamarán"
         );
 
+        listaServicios.add(paseo1);
+
         PaseoLacustre paseo2 = new PaseoLacustre(
                 "Navegación Petrohué",
                 5,
                 "Lancha"
         );
+
+        listaServicios.add(paseo2);
 
         //Excursiones Culturales
         ExcursionCultural excursion1 = new ExcursionCultural(
@@ -42,26 +59,24 @@ public class GestorSerivicios {
                 "Frutillar"
         );
 
+        listaServicios.add(excursion1);
+
         ExcursionCultural excursion2 = new ExcursionCultural(
                 "Ruta Patrimonial",
                 6,
                 "Puerto Varas"
         );
 
-        System.out.println("\n----- RUTAS GASTRONÓMICAS -----");
-        System.out.println(ruta1);
-        System.out.println("------------------------------");
-        System.out.println(ruta2);
+        listaServicios.add(excursion2);
+    }
 
-        System.out.println("\n----- PASEOS LACUSTRES -----");
-        System.out.println(paseo1);
-        System.out.println("------------------------------");
-        System.out.println(paseo2);
+    public void mostrarServicios() {
 
-        System.out.println("\n----- EXCURSIONES CULTURALES -----");
-        System.out.println(excursion1);
-        System.out.println("------------------------------");
-        System.out.println(excursion2);
+        System.out.println("\n======= SERVICIOS TURÍSTICOS =======\n");
 
+        for (ServicioTuristico servicio : listaServicios) {
+            servicio.mostrarInformacion();
+            System.out.println();
+        }
     }
 }

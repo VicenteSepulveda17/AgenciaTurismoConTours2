@@ -2,8 +2,8 @@ package model;
 
 public class ServicioTuristico {
 
-    protected String nombre;
-    protected int duracionHoras;
+    private String nombre;
+    private int duracionHoras;
 
     public ServicioTuristico(String nombre, int duracionHoras) {
         this.nombre = nombre;
@@ -30,5 +30,9 @@ public class ServicioTuristico {
     public String toString() {
         return "Nombre: " + nombre +
                 "\nDuración: " + duracionHoras + " horas";
+    }
+
+    public void mostrarInformacion(){
+        System.out.println(this);
     }
 }

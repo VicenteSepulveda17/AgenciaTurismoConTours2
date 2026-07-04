@@ -1,5 +1,7 @@
 package model;
 
+import java.sql.SQLOutput;
+
 public class RutaGastronomica  extends ServicioTuristico{
 
     private int numeroDeParadas;
@@ -21,5 +23,12 @@ public class RutaGastronomica  extends ServicioTuristico{
     public String toString() {
         return super.toString() +
                 "\nNúmero de paradas: " + numeroDeParadas;
+    }
+
+    @Override
+    public void mostrarInformacion(){
+        System.out.println("---- RUTA GASTRONÓMICA ----");
+        System.out.println(this);
+        System.out.println("---------------------------");
     }
 }

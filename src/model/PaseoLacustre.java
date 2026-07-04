@@ -1,6 +1,6 @@
 package model;
 
-public class PaseoLacustre extends ServicioTuristico{
+public class PaseoLacustre extends ServicioTuristico {
 
     private String tipoEmbarcacion;
 
@@ -21,5 +21,11 @@ public class PaseoLacustre extends ServicioTuristico{
     public String toString() {
         return super.toString() +
                 "\nTipo de embarcación: " + tipoEmbarcacion;
+    }
+    @Override
+    public void mostrarInformacion(){
+        System.out.println("---- PASEO LACUSTRE ----");
+        System.out.println(this);
+        System.out.println("------------------------");
     }
 }
