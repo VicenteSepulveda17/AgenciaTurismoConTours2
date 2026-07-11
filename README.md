@@ -2,27 +2,9 @@
 
 Proyecto desarrollado para la asignatura **Desarrollo Orientado a Objetos I**.
 
-## Objetivo de la Semana 7
+## Semana 8 – Interfaces y GUI
 
-Implementar el concepto de **polimorfismo** en Java mediante una jerarquía de clases de servicios turísticos.
-
-Para ello se creó una superclase (`ServicioTuristico`) y tres subclases especializadas, utilizando herencia, sobrescritura de métodos y una colección de objetos para demostrar el comportamiento polimórfico.
-
-## Clases implementadas
-
-### Superclase
-- ServicioTuristico
-
-### Subclases
-- RutaGastronomica
-- PaseoLacustre
-- ExcursionCultural
-
-### Gestión
-- GestorServicios
-
-### Ejecución
-- Main
+En esta etapa del proyecto se implementó el uso de interfaces y una interfaz gráfica simple utilizando **JOptionPane**, permitiendo registrar y visualizar distintas entidades del sistema.
 
 ## Funcionalidades implementadas
 
@@ -30,17 +12,47 @@ Para ello se creó una superclase (`ServicioTuristico`) y tres subclases especia
 - Encapsulamiento.
 - Herencia.
 - Polimorfismo.
-- Sobrescritura de métodos (`@Override`).
-- Uso de `ArrayList` para almacenar objetos.
-- Recorrido de colecciones mediante una lista de `ServicioTuristico`.
-- Visualización de servicios turísticos utilizando polimorfismo.
+- Implementación de la interfaz `Registrable`.
+- Uso de `ArrayList<Registrable>`.
+- Uso de `instanceof` para identificar tipos de entidades.
+- Registro de Guías Turísticos mediante `JOptionPane`.
+- Registro de Vehículos mediante `JOptionPane`.
+- Visualización de entidades registradas mediante interfaz gráfica.
+- Organización del proyecto en paquetes (`model`, `data` y `ui`).
 
-## Cómo ejecutar
+## Clases principales
 
-1. Abrir el proyecto en IntelliJ IDEA.
-2. Ejecutar la clase `Main`.
-3. El programa mostrará los distintos servicios turísticos utilizando polimorfismo.
+### model
+- Persona
+- GuiaTuristico
+- Vehiculo
+- ColaboradorExterno
+- Registrable
+
+### data
+- GestorDatos
+- GestorServicios
+- GestorEntidades
+
+### ui
+- Main
+- InterfazGrafica
+
+## Ejecución
+
+Ejecutar la clase:
+
+```
+ui.Main
+```
+
+Al iniciar el programa se presenta un menú que permite:
+
+1. Registrar un Guía Turístico.
+2. Registrar un Vehículo.
+3. Mostrar las entidades registradas.
+4. Salir del sistema.
 
 ## Autor
 
-Vicente Sepúlveda
+**Vicente Sepúlveda**
