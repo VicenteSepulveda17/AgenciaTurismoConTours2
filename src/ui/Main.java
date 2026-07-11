@@ -2,14 +2,17 @@ package ui;
 
 import Exceptions.RutInvalidoException;
 import data.GestorDatos;
+import data.GestorEntidades;
 import data.GestorServicios;
 import model.Direccion;
 import model.GuiaTuristico;
 import model.Tour;
+import ui.InterfazGrafica;
 
 public class Main {
 
     public static void main(String[] args) {
+
 
         /*
 
@@ -94,10 +97,23 @@ public class Main {
         gestor.mostrarToursPorTipo("Aventura");
 
 
-         */
+
 
         GestorServicios gestorSerivicios = new GestorServicios();
         gestorSerivicios.crearServicios();
         gestorSerivicios.mostrarServicios();
     }
+
+
+         */
+
+        GestorEntidades gestorEntidades = new GestorEntidades();
+        gestorEntidades.iniciarSistema();
+
+        InterfazGrafica interfaz = new InterfazGrafica();
+        interfaz.iniciar();
+    }
+
+
+
 }

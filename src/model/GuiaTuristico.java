@@ -1,6 +1,8 @@
 package model;
 
-public class GuiaTuristico extends Persona {
+import javax.swing.*;
+
+public class GuiaTuristico extends Persona implements Registrable {
     private String especialidad;
     private int aniosexperiencia;
 
@@ -33,6 +35,18 @@ public class GuiaTuristico extends Persona {
                 "\nEspecialidad:" + especialidad;
 
     }
+
+    @Override
+    public void mostrarResumen(){
+        System.out.println("-----GUIA TURISTICO-----");
+        System.out.println("Nombre: " + getNombre());
+        System.out.println("Especialidad: " + especialidad);
+        System.out.println("Años de experiencia: " + aniosexperiencia);
+
+
+
+    }
+
 }
 
 
